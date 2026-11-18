@@ -1,0 +1,51 @@
+<!doctype html>
+<html lang="zh-CN"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>CGT Intelligence · 国内遗传病基因检测情报</title>
+<style>
+:root{color-scheme:dark;--bg:#09111f;--panel:#111e30;--line:#27384d;--fg:#e8f2ff;--muted:#91a6bc;--accent:#36c6b5}*{box-sizing:border-box}body{margin:0;background:var(--bg);color:var(--fg);font:15px/1.6 system-ui,-apple-system,"PingFang SC","Microsoft YaHei",sans-serif}header{padding:34px max(22px,calc((100vw - 1230px)/2));border-bottom:1px solid var(--line);background:linear-gradient(110deg,#142844,#09111f)}.eyebrow{color:var(--accent);font-size:12px;letter-spacing:.17em}h1{font-size:32px;line-height:1.2;margin:8px 0}header p{color:var(--muted);margin:7px 0}main{max-width:1230px;margin:auto;padding:24px 20px 80px}.metrics{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.metric,.panel,.event{background:var(--panel);border:1px solid var(--line);border-radius:14px;padding:17px}.metric strong{display:block;font-size:27px}.metric span,.minor{color:var(--muted);font-size:12px}.panel{margin:19px 0}.status{padding:10px 14px;border-left:3px solid var(--accent);background:#172b37;margin:15px 0;color:#cbe6e5}.warning{border-left-color:#ffbf69;background:#302920;color:#ffdfae}.controls{display:grid;grid-template-columns:2fr repeat(3,1fr);gap:12px}input,select,button{font:inherit;min-width:0;width:100%;background:#0b1728;color:var(--fg);padding:11px;border:1px solid #354a60;border-radius:9px}button{width:auto;cursor:pointer;border-color:var(--accent);color:var(--accent);padding:9px 16px}button:hover,a:hover{opacity:.8}h2{font-size:20px;margin:25px 0 13px}.event{margin:10px 0}.event a{font-weight:650;color:#c4e9ff;text-decoration:none;font-size:17px;overflow-wrap:anywhere}.row{display:flex;flex-wrap:wrap;gap:9px;align-items:center}.pill{display:inline-block;border:1px solid #4d596b;border-radius:50px;padding:1px 9px;font-size:12px;color:#c0cbd8}.pill.reviewed{color:#92f1c3;border-color:#337857}.event p{margin:9px 0;color:#d2e0ee}.tools{display:flex;align-items:center;justify-content:space-between;gap:12px}footer{color:var(--muted);font-size:13px;padding-top:30px}a{color:#81d8e9}@media(max-width:800px){.metrics{grid-template-columns:repeat(2,1fr)}.controls{grid-template-columns:1fr 1fr}h1{font-size:26px}}@media(max-width:520px){.controls{grid-template-columns:1fr}.tools{align-items:start;flex-direction:column}}
+</style></head>
+<body><header><div class="eyebrow">CGT INTELLIGENCE / INDUSTRY MONITOR</div><h1>国内遗传病基因检测动态情报</h1><p>遗传病检测 · 携带者筛查 · 罕见病诊断 · 三代 / 长读长测序</p><p class="minor">来源可追溯 · 待核验线索与已核验事实分开呈现</p></header>
+<main><section class="metrics"><div class="metric"><strong id="total">—</strong><span>累计情报线索</span></div><div class="metric"><strong id="recent">—</strong><span>近24小时发布</span></div><div class="metric"><strong id="companies">—</strong><span>监测企业</span></div><div class="metric"><strong id="verified">—</strong><span>已人工核验</span></div></section>
+<div id="status" class="status">加载采集状态…</div>
+<section class="panel"><div class="controls"><input id="search" placeholder="搜索企业、疾病、技术、事件…"><select id="company"><option value="">全部企业</option></select><select id="category"><option value="">全部分类</option></select><select id="verification"><option value="">全部核验状态</option><option>已核验</option><option>待核验</option></select></div><div class="tools" style="margin-top:12px"><select id="days" style="max-width:220px"><option value="0">不限时间</option><option value="1">过去24小时</option><option value="7">最近7天</option><option value="30">最近30天</option></select><button id="export">导出筛选结果 CSV</button></div></section>
+<div class="tools"><h2>行业动态 <span id="count" class="minor"></span></h2><span class="minor">时间按北京时间显示 · 新发现不等于新发生</span></div><section id="results"></section><footer>平台仅供行业情报研究。RSS 聚合结果默认未核验，须点击原文核查；抓取失败不代表无新增事件。站点托管于 GitHub Pages。</footer></main>
+<script>
+"use strict";
+const $ = id => document.getElementById(id);
+let all=[], companies=[], current=[];
+const esc=s=>String(s??"").replace(/[&<>"']/g,c=>({"&":"&amp;","<":"&lt;",">":"&gt;",'"':"&quot;","'":"&#39;"}[c]));
+const date=s=>s?new Date(s).toLocaleString("zh-CN",{timeZone:"Asia/Shanghai",year:"numeric",month:"2-digit",day:"2-digit",hour:"2-digit",minute:"2-digit"}):"发布时间未知";
+const goodURL=u=>{try{const x=new URL(u);return ["http:","https:"].includes(x.protocol)?x.href:"#"}catch{return "#"}};
+function render(){
+ let q=$("search").value.trim().toLowerCase(), c=$("company").value, cat=$("category").value, v=$("verification").value,days=Number($("days").value);
+ let cutoff=Date.now()-days*86400000;
+ current=all.filter(e=>(!c||e.company===c)&&(!cat||e.category===cat)&&(!v||e.verification===v)&&(!days||(e.published_at&&new Date(e.published_at).getTime()>=cutoff))&&(!q||[e.title,e.summary,e.company,e.category,(e.topics||[]).join(" "), (e.technology||[]).join(" ")].join(" ").toLowerCase().includes(q)));
+ $("count").textContent=" · "+current.length+" 条";
+ $("results").innerHTML=current.length?current.slice(0,400).map(e=>'<article class="event"><div class="row"><span class="pill '+(e.verification==="已核验"?"reviewed":"")+'">'+esc(e.verification||"待核验")+'</span><span class="pill">'+esc(e.category||"其他")+'</span><span class="minor">'+esc(e.company||"行业动态")+' · '+esc(date(e.published_at))+'</span></div><div style="margin-top:9px"><a target="_blank" rel="noopener noreferrer" href="'+esc(goodURL(e.url))+'">'+esc(e.title)+'</a></div><p>'+esc(e.summary||"暂无摘要，请核查原始来源。")+'</p><div class="minor">'+esc(e.source||"来源未知")+' · '+esc((e.topics||[]).slice(0,5).join(" / "))+'</div></article>').join(""):'<section class="panel">暂无符合筛选条件的情报。若采集失败，请查看上方状态；不能据此判定行业无重大更新。</section>';
+}
+function csv(){
+ const fields=["title","company","category","published_at","source","verification","summary","url"];
+ const clean=x=>'"'+String(x??"").replace(/"/g,'""')+'"';
+ const rows=[fields.join(","),...current.map(e=>fields.map(f=>clean(e[f])).join(","))];
+ const url=URL.createObjectURL(new Blob(["\uFEFF"+rows.join("\r\n")],{type:"text/csv;charset=utf-8"}));
+ const a=document.createElement("a");a.href=url;a.download="cgt-intelligence.csv";a.click();URL.revokeObjectURL(url);
+}
+(async()=>{try{
+ const urls=["data/events.json","data/companies.json","data/status.json"];
+ const responses=await Promise.all(urls.map(u=>fetch(u+"?t="+Date.now(),{cache:"no-store"})));
+ if(responses.some(r=>!r.ok))throw new Error("数据文件请求失败");
+ const [events,cs,status]=await Promise.all(responses.map(r=>r.json()));
+ all=Array.isArray(events)?events:[];companies=Array.isArray(cs)?cs:[];
+ all.sort((a,b)=>String(b.published_at||b.collected_at||"").localeCompare(String(a.published_at||a.collected_at||"")));
+ $("total").textContent=all.length;$("companies").textContent=companies.length;
+ $("verified").textContent=all.filter(x=>x.verification==="已核验").length;
+ $("recent").textContent=all.filter(x=>x.published_at&&Date.now()-new Date(x.published_at).getTime()<86400000&&Date.now()>=new Date(x.published_at).getTime()).length;
+ $("company").innerHTML+=[...new Set([...companies.map(x=>x.name),...all.map(x=>x.company).filter(Boolean)])].sort().map(x=>'<option>'+esc(x)+'</option>').join("");
+ $("category").innerHTML+=[...new Set(all.map(x=>x.category).filter(Boolean))].sort().map(x=>'<option>'+esc(x)+'</option>').join("");
+ const s=$("status"), failed=(status.sources||[]).filter(x=>x.status==="error").length;
+ s.className="status"+(["failed","partial","not_started"].includes(status.result)?" warning":"");
+ s.textContent=status.result==="not_started"?"尚未执行采集：请在仓库 Actions 中运行每日更新工作流。": "最近采集："+date(status.last_run_at)+" · "+(status.result==="success"?"采集成功":status.result==="partial"?"部分来源失败":status.result==="failed"?"全部来源失败":"状态未知")+" · 新线索 "+(status.new_items||0)+" · 失败来源 "+failed+" / "+(status.sources||[]).length+"。RSS 线索默认待核验。";
+ render();
+ }catch(e){$("status").className="status warning";$("status").textContent="数据加载失败："+e.message;$("results").textContent="请检查 GitHub Actions 及 data/*.json。";}})();
+["search","company","category","verification","days"].forEach(x=>$(x).addEventListener("input",render));
+$("export").addEventListener("click",csv);
+</script></body></html>
