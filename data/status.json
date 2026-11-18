@@ -1,8 +1,8 @@
 {
-  "last_run_at": "2026-11-18T07:41:00+00:00",
-  "new_items": 9,
+  "last_run_at": "2026-11-18T07:50:49+00:00",
+  "new_items": 0,
   "total_items": 9,
-  "result": "success",
+  "result": "partial",
   "sources": [
     {
       "name": "遗传病检测",
@@ -12,7 +12,7 @@
     {
       "name": "携带者筛查",
       "status": "ok",
-      "detail": "8 RSS条目，0 候选"
+      "detail": "7 RSS条目，0 候选"
     },
     {
       "name": "罕见病诊断",
@@ -32,7 +32,7 @@
     {
       "name": "医疗器械注册",
       "status": "ok",
-      "detail": "7 RSS条目，0 候选"
+      "detail": "8 RSS条目，0 候选"
     },
     {
       "name": "生殖与新生儿",
@@ -57,7 +57,7 @@
     {
       "name": "企业 · 诺禾致源",
       "status": "ok",
-      "detail": "1 RSS条目，0 候选"
+      "detail": "0 RSS条目，0 候选"
     },
     {
       "name": "企业 · 金域医学",
@@ -101,8 +101,8 @@
     },
     {
       "name": "企业 · 泛生子",
-      "status": "ok",
-      "detail": "0 RSS条目，0 候选"
+      "status": "error",
+      "detail": "HTTP Error 429: Too Many Requests"
     },
     {
       "name": "企业 · 阅微基因",
