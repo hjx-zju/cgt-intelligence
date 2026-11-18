@@ -34,7 +34,20 @@ jobs:
           git add data/events.json data/status.json
           if ! git diff --cached --quiet; then
             git commit -m "data: daily intelligence refresh [skip ci]"
-            git push
+            # A previous workflow may have updated main during RSS collection.
+            # Rebase local collected data onto the latest remote commit.
+            for attempt in 1 2 3 4; do
+              git fetch origin main
+              git rebase -X theirs origin/main
+              if git push origin HEAD:main; then
+                break
+              fi
+              if [ "$attempt" -eq 4 ]; then
+                echo "Unable to push collected data after retries" >&2
+                exit 1
+              fi
+              sleep 3
+            done
           fi
       - uses: actions/configure-pages@v5
       - uses: actions/upload-pages-artifact@v3
