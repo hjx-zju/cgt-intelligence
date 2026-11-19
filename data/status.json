@@ -1,28 +1,28 @@
 {
-  "last_run_at": "2026-11-18T07:50:49+00:00",
-  "new_items": 0,
-  "total_items": 9,
-  "result": "partial",
+  "last_run_at": "2026-11-19T04:52:09+00:00",
+  "new_items": 3,
+  "total_items": 12,
+  "result": "success",
   "sources": [
     {
       "name": "遗传病检测",
       "status": "ok",
-      "detail": "18 RSS条目，3 候选"
+      "detail": "19 RSS条目，4 候选"
     },
     {
       "name": "携带者筛查",
       "status": "ok",
-      "detail": "7 RSS条目，0 候选"
+      "detail": "9 RSS条目，0 候选"
     },
     {
       "name": "罕见病诊断",
       "status": "ok",
-      "detail": "7 RSS条目，2 候选"
+      "detail": "6 RSS条目，3 候选"
     },
     {
       "name": "三代测序",
       "status": "ok",
-      "detail": "5 RSS条目，5 候选"
+      "detail": "2 RSS条目，2 候选"
     },
     {
       "name": "医院招投标",
@@ -32,12 +32,12 @@
     {
       "name": "医疗器械注册",
       "status": "ok",
-      "detail": "8 RSS条目，0 候选"
+      "detail": "7 RSS条目，0 候选"
     },
     {
       "name": "生殖与新生儿",
       "status": "ok",
-      "detail": "5 RSS条目，3 候选"
+      "detail": "3 RSS条目，1 候选"
     },
     {
       "name": "企业 · 华大基因",
@@ -57,7 +57,7 @@
     {
       "name": "企业 · 诺禾致源",
       "status": "ok",
-      "detail": "0 RSS条目，0 候选"
+      "detail": "1 RSS条目，0 候选"
     },
     {
       "name": "企业 · 金域医学",
@@ -101,8 +101,8 @@
     },
     {
       "name": "企业 · 泛生子",
-      "status": "error",
-      "detail": "HTTP Error 429: Too Many Requests"
+      "status": "ok",
+      "detail": "0 RSS条目，0 候选"
     },
     {
       "name": "企业 · 阅微基因",
