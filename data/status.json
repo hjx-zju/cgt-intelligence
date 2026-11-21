@@ -1,18 +1,18 @@
 {
-  "last_run_at": "2026-11-20T04:42:20+00:00",
-  "new_items": 4,
-  "total_items": 16,
+  "last_run_at": "2026-11-21T04:37:49+00:00",
+  "new_items": 3,
+  "total_items": 19,
   "result": "success",
   "sources": [
     {
       "name": "遗传病检测",
       "status": "ok",
-      "detail": "40 RSS条目，4 候选"
+      "detail": "21 RSS条目，5 候选"
     },
     {
       "name": "携带者筛查",
       "status": "ok",
-      "detail": "10 RSS条目，1 候选"
+      "detail": "9 RSS条目，0 候选"
     },
     {
       "name": "罕见病诊断",
@@ -22,12 +22,12 @@
     {
       "name": "三代测序",
       "status": "ok",
-      "detail": "1 RSS条目，1 候选"
+      "detail": "2 RSS条目，2 候选"
     },
     {
       "name": "医院招投标",
       "status": "ok",
-      "detail": "1 RSS条目，0 候选"
+      "detail": "0 RSS条目，0 候选"
     },
     {
       "name": "医疗器械注册",
@@ -57,7 +57,7 @@
     {
       "name": "企业 · 诺禾致源",
       "status": "ok",
-      "detail": "1 RSS条目，0 候选"
+      "detail": "2 RSS条目，0 候选"
     },
     {
       "name": "企业 · 金域医学",
@@ -67,7 +67,7 @@
     {
       "name": "企业 · 迪安诊断",
       "status": "ok",
-      "detail": "0 RSS条目，0 候选"
+      "detail": "1 RSS条目，1 候选"
     },
     {
       "name": "企业 · 凯普生物",
@@ -97,7 +97,7 @@
     {
       "name": "企业 · 世和基因",
       "status": "ok",
-      "detail": "2 RSS条目，0 候选"
+      "detail": "3 RSS条目，0 候选"
     },
     {
       "name": "企业 · 泛生子",
