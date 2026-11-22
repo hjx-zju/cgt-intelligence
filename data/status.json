@@ -1,7 +1,7 @@
 {
-  "last_run_at": "2026-11-21T04:37:49+00:00",
-  "new_items": 3,
-  "total_items": 19,
+  "last_run_at": "2026-11-22T03:52:30+00:00",
+  "new_items": 2,
+  "total_items": 21,
   "result": "success",
   "sources": [
     {
@@ -12,12 +12,12 @@
     {
       "name": "携带者筛查",
       "status": "ok",
-      "detail": "9 RSS条目，0 候选"
+      "detail": "9 RSS条目，1 候选"
     },
     {
       "name": "罕见病诊断",
       "status": "ok",
-      "detail": "5 RSS条目，1 候选"
+      "detail": "6 RSS条目，3 候选"
     },
     {
       "name": "三代测序",
@@ -27,7 +27,7 @@
     {
       "name": "医院招投标",
       "status": "ok",
-      "detail": "0 RSS条目，0 候选"
+      "detail": "1 RSS条目，0 候选"
     },
     {
       "name": "医疗器械注册",
@@ -37,7 +37,7 @@
     {
       "name": "生殖与新生儿",
       "status": "ok",
-      "detail": "3 RSS条目，0 候选"
+      "detail": "2 RSS条目，0 候选"
     },
     {
       "name": "企业 · 华大基因",
@@ -57,7 +57,7 @@
     {
       "name": "企业 · 诺禾致源",
       "status": "ok",
-      "detail": "2 RSS条目，0 候选"
+      "detail": "1 RSS条目，0 候选"
     },
     {
       "name": "企业 · 金域医学",
@@ -67,7 +67,7 @@
     {
       "name": "企业 · 迪安诊断",
       "status": "ok",
-      "detail": "1 RSS条目，1 候选"
+      "detail": "0 RSS条目，0 候选"
     },
     {
       "name": "企业 · 凯普生物",
@@ -97,7 +97,7 @@
     {
       "name": "企业 · 世和基因",
       "status": "ok",
-      "detail": "3 RSS条目，0 候选"
+      "detail": "2 RSS条目，0 候选"
     },
     {
       "name": "企业 · 泛生子",
