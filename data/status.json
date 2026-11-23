@@ -1,23 +1,23 @@
 {
-  "last_run_at": "2026-11-22T03:52:30+00:00",
+  "last_run_at": "2026-11-23T04:31:48+00:00",
   "new_items": 2,
-  "total_items": 21,
-  "result": "success",
+  "total_items": 23,
+  "result": "partial",
   "sources": [
     {
       "name": "遗传病检测",
       "status": "ok",
-      "detail": "21 RSS条目，5 候选"
+      "detail": "17 RSS条目，4 候选"
     },
     {
       "name": "携带者筛查",
       "status": "ok",
-      "detail": "9 RSS条目，1 候选"
+      "detail": "10 RSS条目，2 候选"
     },
     {
       "name": "罕见病诊断",
       "status": "ok",
-      "detail": "6 RSS条目，3 候选"
+      "detail": "6 RSS条目，4 候选"
     },
     {
       "name": "三代测序",
@@ -32,7 +32,7 @@
     {
       "name": "医疗器械注册",
       "status": "ok",
-      "detail": "5 RSS条目，0 候选"
+      "detail": "2 RSS条目，0 候选"
     },
     {
       "name": "生殖与新生儿",
@@ -42,7 +42,7 @@
     {
       "name": "企业 · 华大基因",
       "status": "ok",
-      "detail": "9 RSS条目，0 候选"
+      "detail": "8 RSS条目，0 候选"
     },
     {
       "name": "企业 · 贝瑞基因",
@@ -57,7 +57,7 @@
     {
       "name": "企业 · 诺禾致源",
       "status": "ok",
-      "detail": "1 RSS条目，0 候选"
+      "detail": "2 RSS条目，0 候选"
     },
     {
       "name": "企业 · 金域医学",
@@ -71,8 +71,8 @@
     },
     {
       "name": "企业 · 凯普生物",
-      "status": "ok",
-      "detail": "2 RSS条目，0 候选"
+      "status": "error",
+      "detail": "HTTP Error 429: Too Many Requests"
     },
     {
       "name": "企业 · 迈基诺",
@@ -86,8 +86,8 @@
     },
     {
       "name": "企业 · 博奥生物",
-      "status": "ok",
-      "detail": "0 RSS条目，0 候选"
+      "status": "error",
+      "detail": "HTTP Error 429: Too Many Requests"
     },
     {
       "name": "企业 · 燃石医学",
