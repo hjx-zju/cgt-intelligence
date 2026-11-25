@@ -1,5 +1,44 @@
 [
   {
+    "id": "6709774bcd3f52f787e1f253",
+    "title": "基于scm-LIANTI与BASE-niPGT-M实现单基因及多基因病非侵入性胚胎植入前遗传学检测的高准确率诊断 - 生物通",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE1tc2puVUp6SkR1OFRMRExUQ2NJZDh5Ui1EbzZvWW13aENlbzBxR0ZXRHhIbWFueVVZUi1rQ3hZcXlvci1uLWRKSUFYZ2NvM0lpSG82d1dVQ2JDazJob0h5aEhRMzBCNTRENW5kS2p3?oc=5",
+    "company": "",
+    "category": "其他",
+    "source": "Google News RSS · 遗传病检测",
+    "source_type": "聚合检索",
+    "published_at": "2026-11-24T23:59:12+00:00",
+    "collected_at": "2026-11-25T05:55:38+00:00",
+    "summary": "基于scm-LIANTI与BASE-niPGT-M实现单基因及多基因病非侵入性胚胎植入前遗传学检测的高准确率诊断 生物通",
+    "topics": [
+      "单基因",
+      "PGT-M"
+    ],
+    "technology": [],
+    "verification": "待核验"
+  },
+  {
+    "id": "214ab1ac2ae8ba63919eed48",
+    "title": "PacBio HiFi长读长基因组测序解析导致单基因男性不育的2号染色体复杂臂间倒位及HS6ST1破坏机制 - 生物通",
+    "url": "https://news.google.com/rss/articles/CBMibkFVX3lxTE4xOGw2QktiRENGUE1tYVFad0txVnh0NGk5UzNKVHByQm9xSDliOXJPdFBKbUwyb3JCYVV6SlNRa1Jjci1ZWC02bm5aUkZMcjE3YmI5QTFtcHhKbGtucFgtRmx3U0ZtZnBiQjcxLUV3?oc=5",
+    "company": "",
+    "category": "产品/技术",
+    "source": "Google News RSS · 三代测序",
+    "source_type": "聚合检索",
+    "published_at": "2026-11-24T15:56:35+00:00",
+    "collected_at": "2026-11-25T05:55:38+00:00",
+    "summary": "PacBio HiFi长读长基因组测序解析导致单基因男性不育的2号染色体复杂臂间倒位及HS6ST1破坏机制 生物通",
+    "topics": [
+      "单基因",
+      "长读长"
+    ],
+    "technology": [
+      "PacBio",
+      "长读长"
+    ],
+    "verification": "待核验"
+  },
+  {
     "id": "a39897a287bae0267bdbc444",
     "title": "国家管理罕见病增至1465种……支持范围扩大: 건강 : 财经日报 - 재경일보",
     "url": "https://news.google.com/rss/articles/CBMiYkFVX3lxTE80elhxdXJYLTItdTZSamV1MjFpR1NVVHYyUWhEbkdZSVB0cWM2WWQ0OVgwelRxVTkwbVU2U0FGRVlLVTRScnVYQVNkaU84VDFiUjU1ODdULV9yOE5hYzlrTk9B?oc=5",
@@ -205,6 +244,27 @@
       "罕见病"
     ],
     "technology": [],
+    "verification": "待核验"
+  },
+  {
+    "id": "5b4d1f9f62def17b6f471c5a",
+    "title": "中国西北116例疑似遗传性视网膜病NGS结果汇总：WES与panel潜在诊断率69.6%与66.7%，31例重分类，12例改诊非遗传性疾病，凸显分子检测价值 - Sohu",
+    "url": "https://news.google.com/rss/articles/CBMijAFBVV95cUxPMG42WS1GdjBnajk0UnZlN0h6ZUNzaVFMWWRJaXU0ZjZ1VzkxTTh3OE44MjJCdDQ1YW5nSnBnOTM4bFpxb0hPcElyVkxmd3IxQkVzdnNJeFIzdFhPYVM0N3pnQnZjTG9wOFo1aWE1WHFfMm1JbTF4MGpIcVJWT0N2X1V2ZFp1Zk92MF9SUw?oc=5",
+    "company": "",
+    "category": "其他",
+    "source": "Google News RSS · 遗传病检测",
+    "source_type": "聚合检索",
+    "published_at": "2026-11-19T09:06:22+00:00",
+    "collected_at": "2026-11-25T05:55:38+00:00",
+    "summary": "中国西北116例疑似遗传性视网膜病NGS结果汇总：WES与panel潜在诊断率69.6%与66.7%，31例重分类，12例改诊非遗传性疾病，凸显分子检测价值 Sohu",
+    "topics": [
+      "WES",
+      "遗传性"
+    ],
+    "technology": [
+      "WES",
+      "NGS"
+    ],
     "verification": "待核验"
   },
   {
